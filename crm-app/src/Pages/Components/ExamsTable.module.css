@@ -1,0 +1,33 @@
+.gradesTable {
+  margin-top: 7%;
+}
+
+tbody tr:hover {
+  background-color: #eff1f1;
+}
+
+.nameCourse {
+  /* font-weight: bold; */
+  /* font-family: 'Oswald', sans-serif; */
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.3em;
+  color: #154b68;
+}
+
+.yearCourse {
+  border: none;
+  color: #176087;
+  background-color: #dee4ea;
+  font-family: 'Roboto Slab', serif;
+  width: 5vw;
+  border-radius: 5%;
+}
+
+.statusButton {
+  border: none;
+  background-color: #f6bb0a;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  width: 7vw;
+  border-radius: 5%;
+}
