@@ -6,6 +6,7 @@ import { Container, Jumbotron, Row, Col } from "reactstrap";
 
 const Profile = () => (
   <div>
+    <p>de modificat</p>
     <Row className={styles.profilePhoto}>
       <Col xs="5" className="text-center">
         <img src={avatar} className={`img-responsive ${styles.fitImage}`} />
