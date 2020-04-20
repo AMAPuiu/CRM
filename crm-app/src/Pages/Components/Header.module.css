@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+.navbar {
+  background-color: #002147;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+
+#logo {
+  height: calc(0.232 * 20vw);
+  width: 20vw;
+  user-select: none;
+}
+
+#notification {
+  height: 6vh;
+  user-select: none;
+  display: inline-block;
+}
+
+#notification + #badge {
+  position: relative;
+  top: -10px;
+  left: -12px;
+}
+
+#profile {
+  display: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4em;
+  user-select: none;
+  color: red;
+}
+
+.nav_item:not(:last-child) {
+  margin-left: 2vw;
+  margin-top: 1vh;
+}
+
+#logout {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4em;
+  margin-top: 1.75vh;
+  user-select: none;
+  height: 2em;
+  padding-right: 7vw;
+}
+
+.navbar_toggle {
+  user-select: none;
+}
+
+.navbar_toggle:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  #navbar_collapse.collapsing #profile,
+  #navbar_collapse.show #profile {
+    display: block;
+  }
+  #navbar_collapse.collapsing .nav_item,
+  #navbar_collapse.show .nav_item {
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #navbar_collapse.collapsing #logout,
+  #navbar_collapse.show #logout {
+    width: 27vw;
+    padding-left: 5px;
+    text-align: center;
+  }
+  #navbar_collapse.collapsing #notification,
+  #navbar_collapse.show #notification {
+    padding-left: 3px;
+    padding-bottom: 0%;
+    padding-top: 10px;
+  }
+}

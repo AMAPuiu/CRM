@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 3%;
+  margin: 0%;
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  background-image: url("../../imgs/background_img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -10;
+}
+
+.container .clearfix {
+  overflow: auto;
+}
+
+.introduction {
+  margin-top: 10%;
+}
+
+.logoCard {
+  background-color: rgba(23, 96, 135, 0.6);
+}
+
+.uniLogo {
+  margin-top: 18%;
+}
+
+.uniDate {
+  margin-top: 2%;
+  color: white;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+}
+.appInformation {
+  margin-top: 22%;
+  color: white;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+}
+
+.formCard {
+  background-color: rgba(222, 228, 234, 0.6);
+}
+
+.loginForm {
+  margin-top: 25%;
+  margin-bottom: 25%;
+  font-family: "Oswald", sans-serif;
+  color: #002147;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.logButton {
+  background-color: #176087 !important;
+  text-align: center !important;
+}

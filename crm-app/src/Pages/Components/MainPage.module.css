@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  min-height: 100%;
+  background-image: none !important;
+  background-color: #dee4ea !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

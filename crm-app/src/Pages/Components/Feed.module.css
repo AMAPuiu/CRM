@@ -1,0 +1,49 @@
+.linie {
+  width: 100vw;
+}
+
+.profile {
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+
+  height: 80vh;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.fitImage {
+  margin-top: 8%;
+  width: 70%;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.uni {
+  font-size: 10px;
+  text-align: justify;
+}
+
+.generalInfo {
+  line-height: 1;
+  margin-top: 5%;
+  color: #002147;
+}
+
+.studentProfile {
+  margin-top: 13%;
+  color: #f6bb0a;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.istoric {
+  background-color: #176087;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  width: 50%;
+  height: 6vh;
+  margin-top: 10%;
+}

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+
+.courseInformation {
+  background-color: white;
+  border-radius: 3%;
+  height: 80vh;
+  position: relative;
+  margin-top: 4.8%;
+  color: #002147;
+}
+
+.titluCard {
+  padding-top: 3%;
+  margin-left: 3%;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5em;
+}
+
+.gradesTable {
+  margin-top: 10%;
+}
+
+.yearCourse {
+  border: none;
+  color: #176087;
+  background-color: #dee4ea;
+  width: 5vw;
+  border-radius: 5%;
+}
+
+.statusButton {
+  border: none;
+  background-color: #f6bb0a;
+  color: white;
+  width: 7vw;
+  border-radius: 5%;
+}
+
+.nameCourse {
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.15em;
+  color: #176087;
+}
+
+.groupButton {
+  margin-right: 5px;
+  width: 10vw;
+  height: 5vh;
+}
