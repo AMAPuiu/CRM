@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Grades.module.css';
-import ExamsTable from './ExamsTable';
+import GradesTable from './GradesTable';
 
 import {
   Container,
@@ -19,13 +19,13 @@ const Example = (props) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
 
-  const examStyles = classNames.bind(styles);
+  const gradesStyles = classNames.bind(styles);
   return (
     <Container className={styles.examBox}>
       <div>
         <Nav tabs>
           <NavItem
-            className={examStyles('tab', {
+            className={gradesStyles('tab', {
               active: activeTab === '1',
               inactive: activeTab !== '1',
             })}
@@ -35,11 +35,12 @@ const Example = (props) => {
                 toggle('1');
               }}
             >
-              <p className={styles.tabText}>Neprogramate</p>
+              <p className={styles.tabText}>Anul 1</p>
+              <p className={styles.tabYear}>2017-2018</p>
             </NavLink>
           </NavItem>
           <NavItem
-            className={examStyles('tab', {
+            className={gradesStyles('tab', {
               active: activeTab === '2',
               inactive: activeTab !== '2',
             })}
@@ -49,11 +50,12 @@ const Example = (props) => {
                 toggle('2');
               }}
             >
-              <p className={styles.tabText}>In asteptare</p>
+              <p className={styles.tabText}>Anul 2</p>
+              <p className={styles.tabYear}>2018-2019</p>
             </NavLink>
           </NavItem>
           <NavItem
-            className={examStyles('tab', {
+            className={gradesStyles('tab', {
               active: activeTab === '3',
               inactive: activeTab !== '3',
             })}
@@ -63,26 +65,24 @@ const Example = (props) => {
                 toggle('3');
               }}
             >
-              <p className={styles.tabText}>Programate</p>
+              <p className={styles.tabText}>Anul 3</p>
+              <p className={styles.tabYear}>2019-2020</p>
             </NavLink>
           </NavItem>
         </Nav>
         <TabContent activeTab={activeTab}>
           <TabPane tabId="1">
             <Container className={styles.courseInformation}>
-              <p className={styles.title}>Cereri neprogramate</p>
-              <ExamsTable />
+              {/* <p className={styles.title}>an universitar: 2019-2020</p> */}
+
+              <GradesTable />
             </Container>
           </TabPane>
           <TabPane tabId="2">
-            <Container className={styles.courseInformation}>
-              <p className={styles.title}>Cereri in asteptare</p>
-            </Container>
+            <Container className={styles.courseInformation}></Container>
           </TabPane>
           <TabPane tabId="3">
-            <Container className={styles.courseInformation}>
-              <p className={styles.title}>Cereri programate</p>
-            </Container>
+            <Container className={styles.courseInformation}></Container>
           </TabPane>
         </TabContent>
       </div>

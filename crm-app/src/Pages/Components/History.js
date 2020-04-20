@@ -1,13 +1,23 @@
 import React from 'react';
+import styles from './History.module.css';
 import Header from './Header';
-import Grades from './Grades';
+import Profile from './Grades/Profile';
+import Grades from './Grades/Grades';
+import { Row, Col } from 'reactstrap';
 
 const History = () => {
   return (
-    <div>
+    <React.Fragment>
       <Header />
-      <Grades />
-    </div>
+      <Row className={styles.linie}>
+        <Col xs="3" className={styles.profile}>
+          <Profile />
+        </Col>
+        <Col xs="8">
+          <Grades />
+        </Col>
+      </Row>
+    </React.Fragment>
   );
 };
 

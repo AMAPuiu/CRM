@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '../../imgs/avatar.jpg';
+import avatar from '../../../imgs/avatar.jpg';
 import styles from './Profile.module.css';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
@@ -36,8 +36,8 @@ const Profile = () => (
         <strong>Grupa: </strong>231
       </p>
 
-      <Link to="/History">
-        <button className={styles.istoric}>Istoric Scolar</button>
+      <Link to="/MainPage">
+        <button className={styles.istoric}>Pagina pricipala</button>
       </Link>
     </div>
   </div>

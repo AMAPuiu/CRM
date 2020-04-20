@@ -1,0 +1,19 @@
+tbody tr:hover {
+  background-color: #eff1f1;
+}
+
+.nameCourse {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.3em;
+  color: #154b68;
+}
+
+.statusButton {
+  border: none;
+  background-color: #f6bb0a;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2em;
+  width: 7vw;
+  border-radius: 5%;
+}
