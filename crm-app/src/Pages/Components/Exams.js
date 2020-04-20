@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Container,
   Table,
@@ -13,12 +13,12 @@ import {
   CardText,
   Row,
   Col,
-} from 'reactstrap';
-import classNames from 'classnames/bind';
-import styles from './Exams.module.css';
+} from "reactstrap";
+import classNames from "classnames/bind";
+import styles from "./Exams.module.css";
 
 const Example = (props) => {
-  const [activeTab, setActiveTab] = useState('1');
+  const [activeTab, setActiveTab] = useState("1");
 
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab);
@@ -30,42 +30,42 @@ const Example = (props) => {
       <div>
         <Nav tabs>
           <NavItem
-            className={examStyles('tab', {
-              active: activeTab === '1',
-              inactive: activeTab !== '1',
+            className={examStyles("tab", {
+              active: activeTab === "1",
+              inactive: activeTab !== "1",
             })}
           >
             <NavLink
               onClick={() => {
-                toggle('1');
+                toggle("1");
               }}
             >
               <p className={styles.tabText}>Neprogramate</p>
             </NavLink>
           </NavItem>
           <NavItem
-            className={examStyles('tab', {
-              active: activeTab === '2',
-              inactive: activeTab !== '2',
+            className={examStyles("tab", {
+              active: activeTab === "2",
+              inactive: activeTab !== "2",
             })}
           >
             <NavLink
               onClick={() => {
-                toggle('2');
+                toggle("2");
               }}
             >
               <p className={styles.tabText}>In asteptare</p>
             </NavLink>
           </NavItem>
           <NavItem
-            className={examStyles('tab', {
-              active: activeTab === '3',
-              inactive: activeTab !== '3',
+            className={examStyles("tab", {
+              active: activeTab === "3",
+              inactive: activeTab !== "3",
             })}
           >
             <NavLink
               onClick={() => {
-                toggle('3');
+                toggle("3");
               }}
             >
               <p className={styles.tabText}>Programate</p>
