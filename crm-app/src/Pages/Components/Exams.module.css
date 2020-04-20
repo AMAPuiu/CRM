@@ -1,7 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 .courseInformation {
   background-color: white;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+  border-top-right-radius: 3%;
+  height: 75vh;
+  position: relative;
+  /* padding-left: 25px; */
+  /* border: red solid 2px; */
+  color: #002147;
+}
+
+.examBox {
   border-radius: 3%;
   height: 80vh;
   position: relative;
@@ -9,11 +20,32 @@
   color: #002147;
 }
 
-.titluCard {
-  padding-top: 3%;
-  margin-left: 3%;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.5em;
+.tabText {
+  padding: 0%;
+  margin: 0%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3em;
+}
+
+.tab {
+  margin-right: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.active {
+  background-color: white;
+  color: #f6bb0a;
+}
+
+.inactive {
+  background-color: #176087;
+  color: white;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3em;
 }
 
 .gradesTable {
@@ -38,7 +70,7 @@
 
 .nameCourse {
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.15em;
   color: #176087;
 }

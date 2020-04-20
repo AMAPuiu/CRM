@@ -1,73 +1,97 @@
-import React from "react";
-import styles from "./Exams.module.css";
-
+import React, { useState } from 'react';
 import {
   Container,
-  Jumbotron,
+  Table,
+  TabContent,
+  TabPane,
+  Nav,
+  NavItem,
+  NavLink,
+  Card,
+  Button,
+  CardTitle,
+  CardText,
   Row,
   Col,
-  Table,
-  Button,
-  ButtonGroup,
-} from "reactstrap";
+} from 'reactstrap';
+import classNames from 'classnames/bind';
+import styles from './Exams.module.css';
 
-const Request = () => {
+const Example = (props) => {
+  const [activeTab, setActiveTab] = useState('1');
+
+  const toggle = (tab) => {
+    if (activeTab !== tab) setActiveTab(tab);
+  };
+
+  const examStyles = classNames.bind(styles);
   return (
-    <Container className={styles.courseInformation}>
-      <p className={styles.titluCard}>Cereri in asteptare</p>
-      <Table className={styles.gradesTable}>
-        <tbody className="text-center">
-          <tr>
-            <td className={styles.nameCourse}>Limbaje Formale si Automate</td>
-            <td>
-              <button className={styles.yearCourse}>Anul 1</button>
-            </td>
-            <td>
-              <button className={styles.statusButton}>Status</button>
-            </td>
-          </tr>
-          <tr>
-            <td className={styles.nameCourse}>
-              Calculabilitate si Complexitate
-            </td>
-            <td>
-              <button className={styles.yearCourse}>Anul 2</button>
-            </td>
-            <td>
-              <button className={styles.statusButton}>Status</button>
-            </td>
-          </tr>
-          <tr>
-            <td className={styles.nameCourse}>Geometrie Compuationala</td>
-            <td>
-              <button className={styles.yearCourse}>Anul 2</button>
-            </td>
-            <td>
-              <button className={styles.statusButton}>Status</button>
-            </td>
-          </tr>
-          <tr>
-            <td className={styles.nameCourse}>Programare Logica</td>
-            <td>
-              <button className={styles.yearCourse}>Anul 2</button>
-            </td>
-            <td>
-              <button className={styles.statusButton}>Status</button>
-            </td>
-          </tr>
-          <tr>
-            <td className={styles.nameCourse}>Algebra</td>
-            <td>
-              <button className={styles.yearCourse}>Anul 1</button>
-            </td>
-            <td>
-              <button className={styles.statusButton}>Status</button>
-            </td>
-          </tr>
-        </tbody>
-      </Table>
+    <Container className={styles.examBox}>
+      <div>
+        <Nav tabs>
+          <NavItem
+            className={examStyles('tab', {
+              active: activeTab === '1',
+              inactive: activeTab !== '1',
+            })}
+          >
+            <NavLink
+              onClick={() => {
+                toggle('1');
+              }}
+            >
+              <p className={styles.tabText}>Neprogramate</p>
+            </NavLink>
+          </NavItem>
+          <NavItem
+            className={examStyles('tab', {
+              active: activeTab === '2',
+              inactive: activeTab !== '2',
+            })}
+          >
+            <NavLink
+              onClick={() => {
+                toggle('2');
+              }}
+            >
+              <p className={styles.tabText}>In asteptare</p>
+            </NavLink>
+          </NavItem>
+          <NavItem
+            className={examStyles('tab', {
+              active: activeTab === '3',
+              inactive: activeTab !== '3',
+            })}
+          >
+            <NavLink
+              onClick={() => {
+                toggle('3');
+              }}
+            >
+              <p className={styles.tabText}>Programate</p>
+            </NavLink>
+          </NavItem>
+        </Nav>
+        <TabContent activeTab={activeTab}>
+          <TabPane tabId="1">
+            <Container className={styles.courseInformation}>
+              <p className={styles.title}>Cereri neprogramate</p>
+            </Container>
+          </TabPane>
+          <TabPane tabId="2">
+            <Container className={styles.courseInformation}>
+              <p className={styles.title}>Cereri in asteptare</p>
+            </Container>
+          </TabPane>
+          <TabPane tabId="3">
+            <Container className={styles.courseInformation}>
+              <p className={styles.title}>Cereri programate</p>
+            </Container>
+          </TabPane>
+        </TabContent>
+      </div>
     </Container>
   );
 };
 
-export default Request;
+export default Example;
