@@ -1,9 +1,8 @@
-import React from "react";
-import styles from "./Feed.module.css";
-import Profile from "./Profile";
-import Exams from "./Exams";
-
-import { Container, Jumbotron, Row, Col } from "reactstrap";
+import React from 'react';
+import styles from './Feed.module.css';
+import Profile from './Profile';
+import Exams from './Exams';
+import { Row, Col } from 'reactstrap';
 
 const Feed = () => {
   return (

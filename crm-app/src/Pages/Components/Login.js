@@ -1,5 +1,9 @@
-import React from "react";
-import styles from "./Login.module.css";
+import React from 'react';
+import styles from './Login.module.css';
+import { MicrosoftLoginButton } from 'react-social-login-buttons';
+import { Link } from 'react-router-dom';
+import image from '../../imgs/logo.png';
+
 import {
   Button,
   FormGroup,
@@ -8,28 +12,25 @@ import {
   Row,
   Col,
   Form,
-} from "reactstrap";
-import { MicrosoftLoginButton } from "react-social-login-buttons";
-import { Link } from "react-router-dom";
-import image from "../../imgs/logo.png";
+} from 'reactstrap';
 
 function MyDate() {
   var tempDate = new Date();
   var months = [
-    "Ianuarie",
-    "Februarie",
-    "Martie",
-    "Aprilie",
-    "Mai",
-    "Iunie",
-    "Iulie",
-    "August",
-    "Septemrbrie",
-    "Octombrie",
-    "Noiembrie",
-    "Decembrie",
+    'Ianuarie',
+    'Februarie',
+    'Martie',
+    'Aprilie',
+    'Mai',
+    'Iunie',
+    'Iulie',
+    'August',
+    'Septemrbrie',
+    'Octombrie',
+    'Noiembrie',
+    'Decembrie',
   ];
-  var date = months[tempDate.getMonth()] + " " + tempDate.getFullYear();
+  var date = months[tempDate.getMonth()] + ' ' + tempDate.getFullYear();
   return (
     <p className={`rounded mx-auto d-block text-center ${styles.uniDate}`}>
       {date}
@@ -48,7 +49,7 @@ const Login = () => {
               className={`rounded mx-auto d-block text-center ${styles.uniLogo}`}
             />
             <p className={`text-center ${styles.appInformation}`}>
-              {" "}
+              {' '}
               Aplicație realizată în cadrul Centrului de Dezvoltare Software
             </p>
             <MyDate />

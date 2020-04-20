@@ -1,8 +1,8 @@
-import React from "react";
-import avatar from "../../imgs/avatar.jpg";
-import styles from "./Profile.module.css";
-
-import { Container, Jumbotron, Row, Col } from "reactstrap";
+import React from 'react';
+import avatar from '../../imgs/avatar.jpg';
+import styles from './Profile.module.css';
+import { Link } from 'react-router-dom';
+import { Row, Col } from 'reactstrap';
 
 const Profile = () => (
   <div>
@@ -11,7 +11,7 @@ const Profile = () => (
         <img src={avatar} className={`img-responsive ${styles.fitImage}`} />
       </Col>
       <Col xs="7" className={styles.generalInfo}>
-        <p style={{ fontWeight: "bold" }} className="text-center">
+        <p style={{ fontWeight: 'bold' }} className="text-center">
           Andronic Alexandra
         </p>
         <p className={`${styles.uni} ${styles.marginTop}`}>
@@ -23,7 +23,7 @@ const Profile = () => (
     </Row>
     <div
       className="text-center"
-      style={{ color: "#002147", fontSize: "1.10em" }}
+      style={{ color: '#002147', fontSize: '1.10em' }}
     >
       <p className={styles.studentProfile}>PROFIL STUDENT</p>
       <p>
@@ -35,7 +35,10 @@ const Profile = () => (
       <p>
         <strong>Grupa: </strong>231
       </p>
-      <button className={styles.istoric}>Istoric Scolar</button>
+
+      <Link to="/History">
+        <button className={styles.istoric}>Istoric Scolar</button>
+      </Link>
     </div>
   </div>
 );
